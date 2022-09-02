@@ -32,6 +32,8 @@ btnKetQua.onclick = function () {
     var diem3 = Number(txtDiem3.value);
     console.log(diemChuan, khuVuc, doiTuong, diem1, diem2, diem3);
     //Xử lý:
+    // Tính tổng điểm tuyển sinh (kết quả trả về của hàm tinhDiemTuyenSinh)
+    // So sánh tổng điểm tuyển sinh với điểm chuẩn => Kết quả
     var tongDiem = tinhDiemTuyenSinh(diem1, diem2, diem3, khuVuc, doiTuong);
     var isTrungTuyen = trungTuyen(tongDiem, diemChuan);
     var res = "";
@@ -80,6 +82,7 @@ btnTinhTienDien.onclick = function () {
     var soKw = Number(txtSokw.value);
     var hoTen = txtHoTen.value;
     //Xử lý:
+    //Tính tiền điện mức giá + số kw sử dụng (hàm tinhTienDien)
     var tienDien = tinhTienDien(soKw);
     var res = "Họ tên: " + hoTen + "; Tiền điện: " + new Intl.NumberFormat().format(tienDien);
     // Đầu ra: Hiển thị kết quả
